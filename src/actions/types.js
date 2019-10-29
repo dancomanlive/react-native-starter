@@ -1,1 +1,1 @@
-export const UPDATE_COUNTER = 'update_counter'
+export const FETCH_ALBUMS = 'FETCH_ALBUMS'

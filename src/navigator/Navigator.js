@@ -1,14 +1,14 @@
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
-import LocalStateScreen from './LocalStateScreen'
-import ReduxStateScreen from './ReduxStateScreen'
-import ExampleScreenOne from './ExampleScreenOne'
-import ExampleScreenTwo from './ExampleScreenTwo'
+import Albums from '../containers/Albums'
+import Photos from '../containers/Photos'
+import ExampleScreenOne from '../components/ExampleScreenOne'
+import ExampleScreenTwo from '../components/ExampleScreenTwo'
 
 const FirstStack = createStackNavigator(
-  { LocalStateScreen, ReduxStateScreen },
-  { initialRouteName: 'LocalStateScreen' }
+  { Albums, Photos },
+  { initialRouteName: 'Albums' }
 )
 
 const SecondStack = createStackNavigator(

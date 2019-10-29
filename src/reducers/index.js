@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux'
-import main from './mainReducer'
+import albums from './albumsReducer'
 
-export default combineReducers({ main })
+export default combineReducers({ albums })

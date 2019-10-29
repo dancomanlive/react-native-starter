@@ -2,7 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/es/integration/react'
 import { store, persistor } from './src/store/configureStore'
-import Navigator from './src/components/Navigator'
+import Navigator from './src/navigator/Navigator'
 
 // persistor.purge()
 
