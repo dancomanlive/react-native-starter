@@ -3,11 +3,12 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import Albums from '../containers/Albums'
 import Photos from '../containers/Photos'
+import PhotoDetail from '../components/PhotoDetail'
 import ExampleScreenOne from '../components/ExampleScreenOne'
 import ExampleScreenTwo from '../components/ExampleScreenTwo'
 
 const FirstStack = createStackNavigator(
-  { Albums, Photos },
+  { Albums, Photos, PhotoDetail },
   { initialRouteName: 'Albums' }
 )
 

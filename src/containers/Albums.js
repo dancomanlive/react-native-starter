@@ -5,6 +5,7 @@ import {
 import { useNavigation } from 'react-navigation-hooks'
 import { useSelector, useDispatch } from 'react-redux'
 import { getAlbums } from '../actions/actions'
+import ListView from '../components/ListView'
 
 function Albums() {
   const { navigate } = useNavigation()
@@ -13,17 +14,19 @@ function Albums() {
 
   useEffect(() => {
     if (albums.length === 0) {
-      console.log('dispatching')
       dispatch(getAlbums())
     }
   }, [])
 
   return (
     <View style={styles.containerStyle}>
-      <Text onPress={() => navigate('Photos')}>Tap to navigate to Photos</Text>
+      <Text style={{ margin: 10 }}>Albums</Text>
+      <ListView data={albums} navigate={navigate}/>
     </View>
   )
 }
+
+export default Albums
 
 const styles = StyleSheet.create({
   containerStyle: {
@@ -43,5 +46,3 @@ const styles = StyleSheet.create({
     fontSize: 20
   }
 })
-
-export default Albums
