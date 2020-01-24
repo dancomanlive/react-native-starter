@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { FETCH_ALBUMS, FETCH_PHOTOS } from './types'
+import { FETCH_ALBUMS, FETCH_PHOTOS, DELETE_ITEM } from './types'
 import { albumsUrl, photosUrl } from '../api/constants'
 
 export const getAlbums = () => async dispatch => {
@@ -24,4 +24,10 @@ export const getPhotos = (id) => async dispatch => {
   } catch (error) {
     console.log('photoError', error)
   }
+}
+
+export const deleteItem = (id) => async (dispatch, getState) => {
+  const { photos } = getState()
+  const newPhotos = photos.filter(photo => photo.id !== id)
+  dispatch({ type: DELETE_ITEM, payload: newPhotos })
 }

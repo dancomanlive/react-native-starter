@@ -1,9 +1,9 @@
-# Install
-
-``` react-native run-ios --simulator="iPhone Xʀ (12.2)" ```
-
-# Run
+# Terminal commands
 
 ``` yarn ```
 ``` cd ios && pod install ```
 ``` yarn start ```
+
+# Xcode
+
+``` open Xcode and run project from ios folder ```

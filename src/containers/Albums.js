@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
-import {
-  TouchableOpacity, Text, View, StyleSheet
-} from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import { useNavigation } from 'react-navigation-hooks'
 import { useSelector, useDispatch } from 'react-redux'
 import { getAlbums } from '../actions/actions'

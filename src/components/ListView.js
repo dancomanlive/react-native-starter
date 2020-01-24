@@ -8,7 +8,6 @@ const ListView = (props) => (
   <View style={styles.container}>
     <FlatList
       style={styles.list}
-      contentContainerStyle={styles.listContainer}
       data={props.data}
       horizontal={false}
       numColumns={2}
@@ -49,9 +48,6 @@ const styles = StyleSheet.create({
   },
   list: {
     paddingHorizontal: 10
-  },
-  listContainer: {
-    alignItems: 'center'
   },
   separator: {
     marginTop: 10
